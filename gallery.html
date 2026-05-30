@@ -1,351 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Photo gallery of past XYZ community events." />
-  <title>Gallery | XYZ Community Portal</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    /* Gallery hero */
-    .gallery-hero {
-      background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-      color: #fff;
-      padding: 48px 20px;
-      text-align: center;
-    }
-    .gallery-hero h1 { font-size: clamp(1.6rem,3.5vw,2.4rem); margin-bottom: 8px; }
-    .gallery-hero p  { opacity: 0.8; font-size: 1rem; }
-
-    /* Gallery grid layout */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-    }
-
-    .gallery-item {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.09);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.14);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .gallery-item-body {
-      padding: 18px 20px 20px;
-    }
-
-    .gallery-item-body h3 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-
-    .gallery-item-body .gallery-date {
-      font-size: 0.8rem;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .gallery-item-body p {
-      font-size: 0.88rem;
-      color: #4a5568;
-      line-height: 1.65;
-      margin-bottom: 10px;
-    }
-
-    .gallery-item-body blockquote {
-      border-left: 3px solid var(--accent);
-      padding: 6px 12px;
-      margin: 10px 0 0;
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--muted);
-      background: #fffbf5;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .gallery-item-body blockquote cite {
-      display: block;
-      margin-top: 4px;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 0.78rem;
-      color: var(--accent);
-    }
-
-    /* Section divider */
-    .section-divider {
-      text-align: center;
-      margin: 48px 0 32px;
-      position: relative;
-    }
-    .section-divider::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: var(--border);
-    }
-    .section-divider span {
-      position: relative;
-      background: var(--bg);
-      padding: 0 16px;
-      font-weight: 700;
-      color: var(--muted);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Navigation -->
-<nav id="main-nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <span class="nav-logo">🏘️ XYZ Community</span>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="feedback.html">Feedback</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<main id="main-content">
-
-  <!-- Page Hero -->
-  <div class="gallery-hero animate-fade-down">
-    <div class="container">
-      <h1>📸 Community Event Gallery</h1>
-      <p>Relive the moments that brought our XYZ community together. Every photo tells a story.</p>
-    </div>
-  </div>
-
-  <section class="section-padding" style="background:var(--bg);">
-    <div class="container">
-
-      <p class="text-center text-muted" style="margin-bottom:36px;max-width:640px;margin-left:auto;margin-right:auto;">
-        From summer festivals to quiet tea afternoons — here's a look back at the events that made our community shine. We hope to see you at the next one!
-      </p>
-
-      <!-- 2025 Highlights -->
-      <div class="section-divider"><span>2025 Highlights</span></div>
-
-      <div class="gallery-grid">
-
-        <!-- 1 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=300&fit=crop"
-               alt="Summer Music Festival 2025" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ August 2025</p>
-            <h3>Summer Music Festival 2025</h3>
-            <p>Over 200 residents gathered at Central Park Amphitheater for an unforgettable evening of live music. Local bands played everything from folk to jazz, and the crowd danced well into the night. The event raised $1,200 for the community youth fund.</p>
-            <blockquote>
-              "I've lived here 12 years and this was the best night our community has ever put on. Absolutely magical."
-              <cite>— Sarah M., XYZ Resident</cite>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- 2 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=300&fit=crop"
-               alt="Artisan Baking Workshop 2025" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ July 2025</p>
-            <h3>Artisan Baking Workshop</h3>
-            <p>Chef Maria led 18 enthusiastic residents through the art of sourdough and croissant making. Participants went home with freshly baked loaves and a new skill. The session was so popular it sold out in under 48 hours — we're running it again this June!</p>
-            <blockquote>
-              "I never thought I could bake bread from scratch. Now I do it every Sunday morning!"
-              <cite>— David K., Workshop Participant</cite>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- 3 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&h=300&fit=crop"
-               alt="Community 5K Run 2025" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ July 2025</p>
-            <h3>Community 5K Run</h3>
-            <p>148 runners — from seasoned athletes to first-timers — took on the Riverside Trail route. The youngest finisher was 9 years old; the oldest was 74. Every single participant received a medal and a cheer from the crowd at the finish line.</p>
-            <blockquote>
-              "My kids and I ran together for the first time. We'll never forget crossing that finish line as a family."
-              <cite>— Priya R., Community Member</cite>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=300&fit=crop"
-               alt="Cultural Heritage Fair 2025" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ September 2025</p>
-            <h3>Cultural Heritage Fair</h3>
-            <p>Our most diverse event yet — 14 cultural stalls, traditional dance performances, and a food court representing 10 different cuisines. Families explored the rich tapestry of cultures that make up the XYZ community. Attendance hit a record 450 visitors.</p>
-            <blockquote>
-              "Seeing my children learn about other cultures right here in our neighbourhood was priceless."
-              <cite>— James O., Local Parent</cite>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=300&fit=crop"
-               alt="Yoga in the Park 2025" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ June 2025</p>
-            <h3>Yoga in the Park</h3>
-            <p>A peaceful Saturday morning at Greenfield Park with 45 participants joining instructor Leena for a 90-minute outdoor yoga flow. The session was followed by a community picnic. Many attendees said it was the most relaxed they'd felt all year.</p>
-            <blockquote>
-              "The combination of fresh air, good company, and yoga was exactly what I needed. Can't wait for the next one!"
-              <cite>— Anita S., Regular Attendee</cite>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=600&h=300&fit=crop"
-               alt="Jazz Night 2025" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ October 2025</p>
-            <h3>Jazz Night Under the Stars</h3>
-            <p>The XYZ Jazz Quartet performed to a sold-out crowd of 80 at the Riverside Pavilion. Guests enjoyed wine, cheese, and two hours of smooth jazz as the sun set over the river. The evening ended with a standing ovation and calls for an encore.</p>
-            <blockquote>
-              "I didn't know we had this kind of talent right here in our community. Absolutely world-class."
-              <cite>— Tom W., First-time Attendee</cite>
-            </blockquote>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- 2024 Throwback -->
-      <div class="section-divider" style="margin-top:56px;"><span>2024 Throwback</span></div>
-
-      <div class="gallery-grid">
-
-        <!-- 7 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=300&fit=crop"
-               alt="Senior Citizens Tea 2024" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ November 2024</p>
-            <h3>Senior Citizens' Tea &amp; Talk</h3>
-            <p>A heartwarming afternoon where 55 senior residents gathered for tea, biscuits, and stories. Local historian Mr. Patel gave a fascinating talk on the origins of the XYZ neighbourhood. Several attendees said it was the first time they'd left home in weeks.</p>
-            <blockquote>
-              "Events like this remind me why I've chosen to grow old in this community. Thank you, council."
-              <cite>— Margaret H., Age 81</cite>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- 8 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=300&fit=crop"
-               alt="Kids Art Day 2024" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ August 2024</p>
-            <h3>Kids' Art &amp; Craft Day</h3>
-            <p>38 children aged 5–14 spent a creative afternoon painting, sculpting clay, and making collages under the guidance of our volunteer artists. The artwork was displayed in the community hall for a week. Parents were amazed by what their kids created!</p>
-            <blockquote>
-              "My daughter still has her clay pot on her bedside table. She's so proud of it!"
-              <cite>— Rachel T., Parent</cite>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- 9 -->
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&h=300&fit=crop"
-               alt="Photography Walk 2024" />
-          <div class="gallery-item-body">
-            <p class="gallery-date">🗓️ May 2024</p>
-            <h3>Photography Walk — Old Town</h3>
-            <p>25 photography enthusiasts explored the historic streets of Old Town with professional photographer Liam Chen. Participants learned composition, lighting, and storytelling through their lenses. The best shots were compiled into a community photo book.</p>
-            <blockquote>
-              "I've walked those streets a hundred times but never really seen them until that day."
-              <cite>— Nina B., Photography Walk Participant</cite>
-            </blockquote>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- CTA -->
-      <div style="text-align:center;margin-top:52px;padding:40px;background:#fff;border-radius:12px;box-shadow:var(--shadow);">
-        <h3 style="margin-bottom:10px;">Want to be in next year's gallery?</h3>
-        <p class="text-muted" style="margin-bottom:20px;">Register for an upcoming event and become part of the XYZ community story.</p>
-        <a href="events.html" class="btn btn-primary">Browse Upcoming Events →</a>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<!-- Footer -->
-<footer id="main-footer" role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-col">
-      <h4>🏘️ XYZ Community</h4>
-      <p style="font-size:0.88rem;line-height:1.7;">Organised by the XYZ Community Council. Bringing residents together through events, activities, and shared experiences.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Get Involved</h4>
-      <ul>
-        <li><a href="events.html">Browse Events</a></li>
-        <li><a href="feedback.html">Share Feedback</a></li>
-        <li><a href="contact.html">Contact Council</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Accessibility</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 XYZ Community Council. All rights reserved.</p>
-  </div>
-</footer>
-
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head>  <meta charset="UTF-8" />  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta name="description" content="Photo gallery of past Cognizant community events." />  <title>Gallery | Cognizant Community Portal</title>  <link rel="stylesheet" href="css/styles.css" />  <style>    .gallery-hero {      background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);      color: #fff;      padding: 48px 20px;      text-align: center;    }    .gallery-hero h1 { font-size: clamp(1.6rem,3.5vw,2.4rem); margin-bottom: 8px; }    .gallery-hero p  { opacity: 0.8; font-size: 1rem; }    .gallery-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));      gap: 28px;    }    .gallery-item {      background: #fff;      border-radius: 10px;      box-shadow: 0 2px 12px rgba(0,0,0,0.09);      overflow: hidden;      border: 1px solid var(--border);      transition: transform 0.25s ease, box-shadow 0.25s ease;    }    .gallery-item:hover {      transform: translateY(-4px);      box-shadow: 0 8px 28px rgba(0,0,0,0.14);    }    .gallery-item img {      width: 100%;      height: 210px;      object-fit: cover;      display: block;    }    .gallery-item-body { padding: 18px 20px 20px; }    .gallery-item-body h3 { font-size: 1rem; margin-bottom: 6px; color: var(--text); }    .gallery-item-body .gallery-date {      font-size: 0.8rem; color: var(--primary); font-weight: 600; margin-bottom: 8px;    }    .gallery-item-body p {      font-size: 0.88rem; color: #4a5568; line-height: 1.65; margin-bottom: 10px;    }    .gallery-item-body blockquote {      border-left: 3px solid var(--accent);      padding: 6px 12px;      margin: 10px 0 0;      font-style: italic;      font-size: 0.85rem;      color: var(--muted);      background: #fffbf5;      border-radius: 0 4px 4px 0;    }    .gallery-item-body blockquote cite {      display: block; margin-top: 4px; font-style: normal;      font-weight: 600; font-size: 0.78rem; color: var(--accent);    }    .section-divider {      text-align: center; margin: 48px 0 32px; position: relative;    }    .section-divider::before {      content: ''; position: absolute; top: 50%; left: 0; right: 0;      height: 1px; background: var(--border);    }    .section-divider span {      position: relative; background: var(--bg); padding: 0 16px;      font-weight: 700; color: var(--muted); font-size: 0.85rem;      text-transform: uppercase; letter-spacing: 1px;    }  </style></head><body><nav id="main-nav" role="navigation" aria-label="Main navigation">  <div class="nav-inner">    <span class="nav-logo">🏘️ Cognizant Community</span>    <ul class="nav-links">      <li><a href="index.html">Home</a></li>      <li><a href="events.html">Events</a></li>      <li><a href="gallery.html" class="active">Gallery</a></li>      <li><a href="feedback.html">Feedback</a></li>      <li><a href="contact.html">Contact</a></li>      <li><a href="register.html">Register</a></li>    </ul>  </div></nav><main id="main-content">  <div class="gallery-hero animate-fade-down">    <div class="container">      <h1>📸 Community Event Gallery</h1>      <p>Relive the moments that brought our Cognizant community together. Every photo tells a story.</p>    </div>  </div>  <section class="section-padding" style="background:var(--bg);">    <div class="container">      <p class="text-center text-muted" style="margin-bottom:36px;max-width:640px;margin-left:auto;margin-right:auto;">        From summer festivals to quiet tea afternoons — here's a look back at the events that made our community shine. We hope to see you at the next one!      </p>      <div class="section-divider"><span>2025 Highlights</span></div>      <div class="gallery-grid">        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=300&fit=crop"               alt="Summer Music Festival 2025" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ August 2025</p>            <h3>Summer Music Festival 2025</h3>            <p>Over 200 residents gathered at Central Park Amphitheater for an unforgettable evening of live music. Local bands played everything from folk to jazz, and the crowd danced well into the night. The event raised $1,200 for the community youth fund.</p>            <blockquote>              "I've lived here 12 years and this was the best night our community has ever put on. Absolutely magical."              <cite>— Sarah M., Cognizant Resident</cite>            </blockquote>          </div>        </div>        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=300&fit=crop"               alt="Artisan Baking Workshop 2025" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ July 2025</p>            <h3>Artisan Baking Workshop</h3>            <p>Chef Maria led 18 enthusiastic residents through the art of sourdough and croissant making. Participants went home with freshly baked loaves and a new skill. The session was so popular it sold out in under 48 hours — we're running it again this June!</p>            <blockquote>              "I never thought I could bake bread from scratch. Now I do it every Sunday morning!"              <cite>— David K., Workshop Participant</cite>            </blockquote>          </div>        </div>        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&h=300&fit=crop"               alt="Community 5K Run 2025" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ July 2025</p>            <h3>Community 5K Run</h3>            <p>148 runners — from seasoned athletes to first-timers — took on the Riverside Trail route. The youngest finisher was 9 years old; the oldest was 74. Every single participant received a medal and a cheer from the crowd at the finish line.</p>            <blockquote>              "My kids and I ran together for the first time. We'll never forget crossing that finish line as a family."              <cite>— Priya R., Community Member</cite>            </blockquote>          </div>        </div>        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=300&fit=crop"               alt="Cultural Heritage Fair 2025" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ September 2025</p>            <h3>Cultural Heritage Fair</h3>            <p>Our most diverse event yet — 14 cultural stalls, traditional dance performances, and a food court representing 10 different cuisines. Families explored the rich tapestry of cultures that make up the Cognizant community. Attendance hit a record 450 visitors.</p>            <blockquote>              "Seeing my children learn about other cultures right here in our neighbourhood was priceless."              <cite>— James O., Local Parent</cite>            </blockquote>          </div>        </div>        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=300&fit=crop"               alt="Yoga in the Park 2025" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ June 2025</p>            <h3>Yoga in the Park</h3>            <p>A peaceful Saturday morning at Greenfield Park with 45 participants joining instructor Leena for a 90-minute outdoor yoga flow. The session was followed by a community picnic. Many attendees said it was the most relaxed they'd felt all year.</p>            <blockquote>              "The combination of fresh air, good company, and yoga was exactly what I needed. Can't wait for the next one!"              <cite>— Anita S., Regular Attendee</cite>            </blockquote>          </div>        </div>        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=600&h=300&fit=crop"               alt="Jazz Night 2025" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ October 2025</p>            <h3>Jazz Night Under the Stars</h3>            <p>The Cognizant Jazz Quartet performed to a sold-out crowd of 80 at the Riverside Pavilion. Guests enjoyed wine, cheese, and two hours of smooth jazz as the sun set over the river. The evening ended with a standing ovation and calls for an encore.</p>            <blockquote>              "I didn't know we had this kind of talent right here in our community. Absolutely world-class."              <cite>— Tom W., First-time Attendee</cite>            </blockquote>          </div>        </div>      </div>      <div class="section-divider" style="margin-top:56px;"><span>2024 Throwback</span></div>      <div class="gallery-grid">        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=300&fit=crop"               alt="Senior Citizens Tea 2024" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ November 2024</p>            <h3>Senior Citizens' Tea &amp; Talk</h3>            <p>A heartwarming afternoon where 55 senior residents gathered for tea, biscuits, and stories. Local historian Mr. Patel gave a fascinating talk on the origins of the Cognizant neighbourhood. Several attendees said it was the first time they'd left home in weeks.</p>            <blockquote>              "Events like this remind me why I've chosen to grow old in this community. Thank you, council."              <cite>— Margaret H., Age 81</cite>            </blockquote>          </div>        </div>        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=300&fit=crop"               alt="Kids Art Day 2024" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ August 2024</p>            <h3>Kids' Art &amp; Craft Day</h3>            <p>38 children aged 5–14 spent a creative afternoon painting, sculpting clay, and making collages under the guidance of our volunteer artists. The artwork was displayed in the community hall for a week. Parents were amazed by what their kids created!</p>            <blockquote>              "My daughter still has her clay pot on her bedside table. She's so proud of it!"              <cite>— Rachel T., Parent</cite>            </blockquote>          </div>        </div>        <div class="gallery-item">          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&h=300&fit=crop"               alt="Photography Walk 2024" />          <div class="gallery-item-body">            <p class="gallery-date">🗓️ May 2024</p>            <h3>Photography Walk — Old Town</h3>            <p>25 photography enthusiasts explored the historic streets of Old Town with professional photographer Liam Chen. Participants learned composition, lighting, and storytelling through their lenses. The best shots were compiled into a community photo book.</p>            <blockquote>              "I've walked those streets a hundred times but never really seen them until that day."              <cite>— Nina B., Photography Walk Participant</cite>            </blockquote>          </div>        </div>      </div>      <div style="text-align:center;margin-top:52px;padding:40px;background:#fff;border-radius:12px;box-shadow:var(--shadow);">        <h3 style="margin-bottom:10px;">Want to be in next year's gallery?</h3>        <p class="text-muted" style="margin-bottom:20px;">Register for an upcoming event and become part of the Cognizant community story.</p>        <a href="events.html" class="btn btn-primary">Browse Upcoming Events →</a>      </div>    </div>  </section></main><footer id="main-footer" role="contentinfo">  <div class="footer-grid">    <div class="footer-col">      <h4>🏘️ Cognizant Community</h4>      <p style="font-size:0.88rem;line-height:1.7;">Organised by the Cognizant Community Council. Bringing residents together through events, activities, and shared experiences.</p>    </div>    <div class="footer-col">      <h4>Quick Links</h4>      <ul>        <li><a href="index.html">Home</a></li>        <li><a href="events.html">Events</a></li>        <li><a href="gallery.html">Gallery</a></li>        <li><a href="feedback.html">Feedback</a></li>      </ul>    </div>    <div class="footer-col">      <h4>Get Involved</h4>      <ul>        <li><a href="events.html">Browse Events</a></li>        <li><a href="register.html">Register</a></li>        <li><a href="feedback.html">Share Feedback</a></li>        <li><a href="contact.html">Contact Council</a></li>      </ul>    </div>    <div class="footer-col">      <h4>Legal</h4>      <ul>        <li><a href="#">Privacy Policy</a></li>        <li><a href="#">Terms of Use</a></li>        <li><a href="#">Accessibility</a></li>      </ul>    </div>  </div>  <div class="footer-bottom">    <p>&copy; 2026 Cognizant Community Council. All rights reserved.</p>  </div></footer></body></html>
