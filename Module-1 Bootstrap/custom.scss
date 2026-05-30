@@ -1,0 +1,12 @@
+// Custom Sass Variables for Exercise 19.2
+$primary: #e8622a; // Custom Cognizant Orange
+$border-radius: 1rem; // Custom border radius
+$border-radius-lg: 1.5rem;
+
+// Import Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Custom class for demo
+.custom-rounded {
+  border-radius: $border-radius-lg;
+}
