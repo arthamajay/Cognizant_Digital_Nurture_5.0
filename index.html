@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="XYZ Community Event Portal — Discover and register for events organised by your community council." />
+  <meta name="author" content="XYZ Community Council" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Home | XYZ Community Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .promo-box {
+      background: rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 12px 24px;
+      display: inline-block;
+      margin-top: 16px;
+    }
+    /* Featured events strip on home */
+    .featured-strip {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scroll-snap-type: x mandatory;
+    }
+    .featured-strip::-webkit-scrollbar { height: 6px; }
+    .featured-strip::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    .featured-card {
+      min-width: 260px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .featured-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    }
+    .featured-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .featured-card-body { padding: 14px; }
+    .featured-card-body h4 { font-size: 0.98rem; margin-bottom: 4px; }
+    .featured-card-body p  { font-size: 0.82rem; color: var(--muted); margin-bottom: 10px; }
+    /* Geo section on home */
+    #geo-section-home { background: #f0f4f8; }
+    #geo-result {
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-top: 16px;
+      display: none;
+    }
+    #geo-result.show { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <span class="nav-logo">�️ XYZ Community</span>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- Hero Banner -->
+  <section id="home">
+    <div id="welcome-banner" class="gradient-hero animate-fade-down">
+      <div class="container">
+        <p class="welcome-user">👋 Hello, XYZ Community Member!</p>
+        <h1 class="portal-title">XYZ Community Event Portal</h1>
+        <p class="portal-subtitle">Your council has lined up exciting events this season — explore, sign up, and be part of the community.</p>
+        <p style="color:#ffd54f; font-weight:bold; margin-top:12px;">
+          🎉 New this month: Free entry to the Community Carnival for all residents!
+        </p>
+        <div class="promo-box">
+          <span class="highlight" style="background:rgba(255,255,255,0.9);color:#1a73e8;">
+            8 events coming up — spots are filling fast!
+          </span>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="events.html" class="btn btn-outline" style="color:#fff;border-color:#fff;">Browse All Events</a>
+          <a href="events.html#register-section" class="btn btn-primary btn-pulse" style="background:#f4a261;border:none;">Register for an Event</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stats-inner">
+        <div class="stat-item"><div class="stat-num">8</div><div class="stat-lbl">Upcoming Events</div></div>
+        <div class="stat-item"><div class="stat-num">340</div><div class="stat-lbl">Community Members</div></div>
+        <div class="stat-item"><div class="stat-num">5</div><div class="stat-lbl">Event Categories</div></div>
+        <div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Venues</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Events -->
+  <section class="section-padding" style="background:#fff;">
+    <div class="container">
+      <h2 class="section-title">Featured This Month</h2>
+      <p class="text-center text-muted" style="margin-bottom:28px;">Hand-picked by your community council — don't miss these!</p>
+      <div class="featured-strip">
+
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&h=200&fit=crop" alt="Community Carnival" />
+          <div class="featured-card-body">
+            <span class="badge badge-culture" style="margin-bottom:6px;">culture</span>
+            <h4>Community Carnival</h4>
+            <p>📅 Jun 21, 2026 &nbsp;|&nbsp; 🆓 Free Entry</p>
+            <a href="events.html" class="btn btn-primary btn-sm" style="width:100%;text-align:center;">View &amp; Register</a>
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=200&fit=crop" alt="Summer Music Festival" />
+          <div class="featured-card-body">
+            <span class="badge badge-music" style="margin-bottom:6px;">music</span>
+            <h4>Summer Music Festival</h4>
+            <p>📅 Jun 15, 2026 &nbsp;|&nbsp; 💰 $15</p>
+            <a href="events.html" class="btn btn-primary btn-sm" style="width:100%;text-align:center;">View &amp; Register</a>
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=400&h=200&fit=crop" alt="Neighbourhood 5K Run" />
+          <div class="featured-card-body">
+            <span class="badge badge-sports" style="margin-bottom:6px;">sports</span>
+            <h4>Neighbourhood 5K Run</h4>
+            <p>📅 Jul 4, 2026 &nbsp;|&nbsp; 💰 $5</p>
+            <a href="events.html" class="btn btn-primary btn-sm" style="width:100%;text-align:center;">View &amp; Register</a>
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=200&fit=crop" alt="Morning Yoga" />
+          <div class="featured-card-body">
+            <span class="badge badge-health" style="margin-bottom:6px;">health</span>
+            <h4>Morning Yoga in the Park</h4>
+            <p>📅 Jun 28, 2026 &nbsp;|&nbsp; 💰 $8</p>
+            <a href="events.html" class="btn btn-primary btn-sm" style="width:100%;text-align:center;">View &amp; Register</a>
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=200&fit=crop" alt="Baking Workshop" />
+          <div class="featured-card-body">
+            <span class="badge badge-workshop" style="margin-bottom:6px;">workshop</span>
+            <h4>Artisan Baking Workshop</h4>
+            <p>📅 Jun 20, 2026 &nbsp;|&nbsp; 💰 $10</p>
+            <a href="events.html" class="btn btn-primary btn-sm" style="width:100%;text-align:center;">View &amp; Register</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What's On — Community Services -->
+  <section class="section-padding" style="background:var(--bg);">
+    <div class="container">
+      <h2 class="section-title">What Your Council Offers</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🎭</div>
+          <h3>Arts &amp; Culture</h3>
+          <p class="text-muted">Fairs, exhibitions, and cultural celebrations for the whole family.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚽</div>
+          <h3>Sports &amp; Fitness</h3>
+          <p class="text-muted">Runs, yoga sessions, and team sports open to all residents.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🍞</div>
+          <h3>Skill Workshops</h3>
+          <p class="text-muted">Hands-on workshops in cooking, crafts, and more.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">�</div>
+          <h3>Music &amp; Entertainment</h3>
+          <p class="text-muted">Live performances, open-mic nights, and music festivals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find Nearby Events (Geolocation) -->
+  <section id="geo-section-home" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Find Events Near You</h2>
+      <p class="text-center text-muted" style="margin-bottom:24px;">
+        Let us locate the XYZ community events happening closest to where you are right now.
+      </p>
+      <div style="text-align:center;">
+        <button id="geo-btn" class="btn btn-primary">📍 Find Nearby Events</button>
+      </div>
+      <div id="geo-result" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer id="main-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>�️ XYZ Community</h4>
+      <p style="font-size:0.88rem;line-height:1.7;">Organised by the XYZ Community Council. Bringing residents together through events, activities, and shared experiences.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="events.html">Browse Events</a></li>
+        <li><a href="events.html#register-section">Register</a></li>
+        <li><a href="feedback.html">Share Feedback</a></li>
+        <li><a href="contact.html">Contact Council</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 XYZ Community Council. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
